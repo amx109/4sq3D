@@ -1,6 +1,14 @@
+/******** **********/
 
-	//mirror([0,1])
-	//surface(file = "foursquare.dat", center = true, convexity = 5);
+
+difference()
+{
+	mirror([0,1]) //do this to get the correct orientation
+	surface(file = "foursquare.dat", center = true, convexity = 100);
 	
-linear_extrude(height = 2, center = false)
-import_dxf(file = "ams_water.dxf");
+	
+	import_dxf(file = "ams_water.dxf");
+	
+}
+
+
